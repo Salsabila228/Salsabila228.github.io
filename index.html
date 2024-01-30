@@ -1,0 +1,397 @@
+<meta name="vieport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+
+<div class="w3-mobile">
+<div class="w3-bar w3-card-4">
+	<div class="w3-display-topleft">
+		<br>
+		<button class="w3-bar-item w3-button" onclick="openKota('bkkbn')">
+			<a href="https://www.bkkbn.go.id/">
+			<img src="bkkbn.jpg" width="50px" title="BKKBN">
+			</a>
+		</button>
+		<button class="w3-bar-item w3-button" onclick="openKota('dppkb')">
+			<a href="https://dppkb.bandung.go.id/">
+			<img src="dppkb.jpg" width="40px" title="DPPKB Kota Bandung">
+			</a>
+		</button>
+		<button class="w3-bar-item w3-button" onclick="openKota('logogenre')">
+			<a href="tugass13.html">
+			<img src="logogenre.jpg" width="40px" title="GenRe Kota Bandung">
+			</a>
+		</button>
+		<button class="w3-bar-item w3-button" onclick="openKota('salamgenre')"><img src="salamgenre.jpeg" width="40px" title="Salam GenRe!"></button>
+	</div>
+	<div class="w3-display-topmiddle">
+		<br>
+		<form action="tugass13.html" method="get">
+			<input type="text" name="q" placeholder="    What you're lookin' for?" class="w3-round-xxlarge" style="width: 500px; border-radius: 50px;">
+			<button type="submit" class="w3-round-xlarge w3-button">Search</button>
+		  </form>	
+	</div>
+	<div class="w3-display-topright">
+		<br>
+		<button class="w3-button w3-bar-item w3-round-xlarge w3-blue" onclick="openKota('login')">LOGIN</button>
+		<button class="w3-button w3-bar-item w3-round-xlarge" onclick="openKota('join')">JOIN US!</button>
+	</div>
+</div>
+
+<br><br><br><br><br>
+<div class="w3-card-4" style="height:300px;">
+	<img src="genree.jpg" style="width: 100%; height:auto;">
+</div>
+
+<br><br><br>
+		<div class="w3-bar w3-card-4">
+			<button class="w3-bar-item w3-button" onclick="openKota('genre')"><b>What's GenRe?</b></button>
+			<button class="w3-bar-item w3-button" onclick="openKota('meet')"><b>Meet The Team</b></button>
+			<button class="w3-bar-item w3-button" onclick="openKota('program')"><b>Our Programs</b></button>
+			<div class="w3-dropdown-hover">
+				<button class="w3-button" onclick="openKota('events')"><b>Our Events</b></button>
+				<div class="w3-dropdown-content w3-bar-block w3-card-4">
+					<button class="w3-bar-item w3-button" onclick="openKota('pemilihan')">Pemilihan Duta GenRe (PILDUGEN)</button> 
+					<button class="w3-bar-item w3-button" onclick="openKota('psks')">Pendidik Sebaya dan Konselor Sebaya (PSKS)</button> 
+					<button class="w3-bar-item w3-button" onclick="openKota('action')">GenRe! Action</button>
+					<button class="w3-bar-item w3-button" onclick="openKota('care')">We Care We Share</button>
+					<button class="w3-bar-item w3-button" onclick="openKota('youth')">International Youth Day (IYD)</button> 
+				</div>
+			</div>
+		<button class="w3-bar-item w3-button" onclick="openKota('achievements')"><b>Achievements</b></button>
+		<button class="w3-bar-item w3-button" onclick="openKota('me')"><b>About Me</b></button>
+		</div>
+</div>
+
+<center>
+<br><br>
+<div class="w3-card w3-margin" style="width: 20%;">
+	<div id="login" class="w3-container kota w3-white w3-card-4" style="display: none;">
+		<form>
+			<h4><strong>LOGIN</strong></h4><hr>
+			<label for="email">Enter your email</label><br>
+ 			<input type="email" id="email" name="email"><br><br>
+			<label for="password">Password</label><br>
+			<input type="password" id="password" name="password"><br><br><br>
+			<input type="checkbox" id="remember" name="remember" value="remember">
+ 			<label for="remember">Remember me?</label><br><br>
+			<input type="button" class="w3-button w3-blue" style="width:200" value="SUBMIT" onclick="submit()"><br>
+		</form>
+		<br>
+	</div>
+</div>
+</center>
+
+<center>
+<div class="w3-card w3-margin" style="width: 60%;">
+	<div id="join" class="w3-container kota w3-white w3-card-4" style="display: none;">
+		<h3><strong>WANNA TAKE A JOURNEY WITH US?</strong></h3>
+		<p>You can fill this form correctly.</p>
+		<hr>
+		<form>
+			<table>
+			<tr><td>NAMA LENGKAP<td>:<td><input class="w3-input" type="text" name="namalengkap"><br>
+			<tr><td>JENIS KELAMIN<td>:<td><input class="w3-radio" type="radio" name=lamakerja value=1> Laki-Laki
+				<tr><td><td><td><input class="w3-radio" type="radio" name=lamakerja value=2> Perempuan
+			<br><br>
+			<tr><td>TANGGAL LAHIR<td>:<td><input type="date" name="birthday">
+			<br><br>
+			<tr><td>EMAIL<td>:<td><input type="email" name="email">
+			<br>
+			<tr><td>PEKERJAAN SAAT INI<td>:<td><select class="w3-select" name="pekerjaan">
+				<option value="" disabled selected>Pilih Salah Satu</option>
+				<option>Pelajar
+				<option>Mahasiswa
+				<option>Pekerja
+				<option>Lainnya
+			<br><br>
+			<tr><td>UPLOAD CV/RESUME<td>:<td><input type="file">
+			<br><br>
+			<tr><td>ASAL PIK-R<td>:<td><input class="w3-input" type="text" name="asalpikr"><br>
+			<tr><td>APA MOTIVASIMU UNTUK BERGABUNG?<td>:<td><textarea name="motivasi" rows="7" cols="50"></textarea>
+			</table>
+			<br>
+			<tr><td><td><td><input class="w3-check" type="checkbox" name="setuju"><label class="w3-text-red">  Dengan mengisi form ini, saya setuju dengan semua ketentuan dan tupoksi masing-masing. Serta mendapatkan berbagai informasi inspiratif secara eksklusif dari GenRe Kota Bandung.</label>
+			<br><br><br>
+			<tr><td><button class="w3-btn w3-orange w3-round-xxlarge" type="submit"><strong>Kirim</strong></button>
+			<tr><td><button class="w3-btn w3-orange w3-round-xxlarge" type="reset"><strong>Batal</strong></button>
+			<br><br><br><br>
+		</form>
+	</div>
+</div>
+</center>
+
+<div id="genre" class="w3-container kota w3-pale-yellow w3-card-4">
+	<div class="w3-card w3-margin w3-left w3-indigo w3-animate-top" style="width: 50%;">
+		<center>
+		<h2><strong>HELLO FELLAS, THIS IS GenRe!</strong></h2>
+		<img src="logogenre.jpg" style="width: 23%;">
+		<img src="salamgenre.jpeg" style="width: 20%;">
+		<p style="width: 95%;">GenRe (Generasi Berencana) merupakan salah satu program Badan Kependudukan dan Keluarga Berencana Nasional (BKKBN) untuk mewujudkan pembangunan yang berwawasan kependudukan dan mewujudkan keluarga kecil bahagia sejahtera.
+		Remaja sejatinya adalah harapan semua bangsa, negara-negara yang memiliki remaja yang kuat serta memiliki kecerdasan sprititual, intelektual serta emosional yang kuat menjadikan bangsa tersebut kelak akan kuat pula.
+		Masalah remaja yang timbul biasanya berkaitan dengan masalah seksualitas, AIDS,  penyalahgunaan NAPZA, dan sebagainya. Remaja dalam kondisi ini tentu saja membutuhkan penanganan serta informasi 
+		seluas-luasnya mengenai kesehatan reproduksi, pentingnya menata masa depan dengan baik lewat meninggalkan perilaku yang tidak bermanfaat dan merusak masa depan remaja itu sendiri.
+		Menjalani kehidupan remaja yang jauh dari perilaku seks bebas, pernikahan dini dan ketergantungan pada obat-obatan terlarang serta menjauhkan diri dari bahaya AIDS tentulah membutuhkan perhatian kita semua. Remaja tidak bisa 
+		berjalan sendirian tanpa pendampingan orang tua, masyarakat lingkungan serta negaranya. Pendekatan BKKBN dengan melibatkan pihak sekolah dan kampus sebagai bagian dari mendekatkan GenRe dengan komunitasnya yaitu remaja sekolah/mahasiswa 
+		yang telah berjalan selama ini tentulah harus mendapatkan dukungan dari semua pihak baik itu dari guru dan kampus dimana remaja dan mahasiswa itu beraktivitas. Melibatkan anak sebaya sebagai Duta GenRe yang telah berjalan selama 
+		ini juga dengan pembekalan-pembekalan serta modul-modul yang sesuai dengan usianya diharapkan mampu mendekatkan program ini pada sasarannya yaitu remaja Indonesia. Langkah BKKBN mempersembahkan program Generasi Berencana (GenRe) sangat 
+		diharapkan menjadikan kualitas remaja Indonesia mampu menjadi remaja yang mampu menggantikan generasi berikutnya, sehingga Indonesia kelak semakin maju serta diperhitungkan di mata dunia. Generasi yang dipersiapkan dengan terencana 
+		memerlukan uluran dan kerjasama dari semua pihak, agar persoalan remaja serta kendalanya dapat diselesaikan secara bersama-sama.
+		Karena generasi berencana, bukan tidak mustahil akan melahirkan generasi emas bagi Indonesia.</p>
+		<br><br><br>
+		</center>
+	</div>
+
+	<div class="w3-card w3-margin w3-right w3-indigo w3-animate-top" style="width: 43%;">
+		<center>
+		<h3><strong>Tujuan dan Sasaran GenRe</strong></h3>
+		<p>Program GenRe bertujuan untuk memfasilitasi remaja agar berperilaku hidup sehat dan berakhlak untuk mencapai ketahanan remaja sebagai dasar untuk mewujudkan Generasi Berencana. GenRe Kota Bandung ditujukan untuk para remaja yang belum menikah.</p>
+		</center>
+	</div>
+</div>
+
+<center>
+<div id="me" class="w3-container kota w3-gray w3-card-4" style="display: none;">
+	<div class="w3-card w3-margin w3-animate-fading w3-white" style="width: 40%;">
+	<br>
+	<h3><strong>ABOUT ME</strong></h3>
+	<br>
+		<img src="myself1.jpg" style="width: 40%;">
+		<br><br>
+		<table>
+			<tr><td>Name<td>:<td>Salsabila
+			<br>
+			<tr><td>NIM<td>:<td>10123214
+			<br>
+			<tr><td>Kelas<td>:<td>IF-6
+		</table>
+		<br><hr>
+	<p>Get in touch with me!</p>
+	<a href="https://www.instagram.com/salsabl22_?igsh=bHEzdW43NTVrcnd6"><img src="instagram.png" style="width: 25px;"></a>
+	<a href="https://www.linkedin.com/in/salsabila-%E3%85%A4-96a997218?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="linkedin.png" style="width: 25px;"></a>
+	<br><br>
+	</div>
+</center>
+</div>
+
+<center>
+<div id="pemilihan" class="w3-container kota w3-card-4 w3-sand" style="display: none;">
+	<div class="w3-card w3-margin w3-left w3-purple w3-text-white w3-animate-left" style="width: 50%;">
+		<h3><strong>Pemilihan Duta GenRe Kota Bandung 2023</strong></h3>
+		<h3><strong>Our Journey!</strong></h3>
+		<hr>
+		<table>
+			<tr><td><img src="pildugen1.png" style="width: 100%;"><center><h6>Panitia PILDUGEN'23</h6></center><td><img src="pildugen2.jpg" style="width: 100%;"><center><h6>Technical Meeting Peserta</h6></center><td><img src="pildugen3.jpg" style="width: 100%;"><center><h6>Technical Meeting (2)</h6></center>
+			<tr><td><img src="pildugen4.jpg" style="width: 100%;"><center><h6>Tes Tulis dan Wawancara</h6></center><td><img src="pildugen5.jpg" style="width: 100%;"><center><h6>Technical Meeting Finalis 20 Besar</h6></center><td><img src="pildugen6.jpg" style="width: 100%;"><center><h6>Pemaparan Program Inovasi</h6></center>
+			<tr><td><img src="pildugen7.jpg" style="width: 100%;"><center><h6>Karantina</h6></center><td><img src="pildugen8.jpg" style="width: 100%;"><center><h6>Karantina (2)</h6></center><td><img src="pildugen9.jpg" style="width: 100%;"><center><h6>Panitia PILDUGEN'23</h6></center>
+			<tr><td><img src="pildugen10.png" style="width: 100%;"><center><h6>Sambutan Plh Walikota Bandung</h6></center><td><img src="pildugen11.png" style="width: 100%;"><center><h6>Audiens Grand Final</h6></center><td><img src="pildugen12.png" style="width: 100%;"><center><h6>Finalis Grand Final</h6></center>
+		</table> 
+	</div>
+	<div class="w3-card w3-margin w3-right w3-purple w3-text-white w3-animate-right" style="width: 43%;">
+		<h3><strong>Get Know More About PILDUGEN</strong></h3>
+		<hr>
+		<p style="width: 95%;">PILDUGEN atau Pemilihan Duta Generasi Berencana (GenRe) Kota Bandung selalu diadakan setiap tahunnya. Duta GenRe menjadi ajang pemilihan remaja putra dan putri untuk menjadi figur teladan serta motivator di kalangan remaja yang nantinya akan berperan memberikan wawasan kepada generasi muda emas tentang peduli remaja dan program GenRe lainnya. Selain itu juga untuk menciptakan remaja yang bebas narkoba dan HIV/AIDS.</p>
+		<p style="width: 95%;">Kegiatan ini adalah untuk mempersiapkan remaja atau young generation yang memiliki skill membantu pembangunan dan menjadi icon remaja yang baik serta bisa mengajak yang lain untuk menjauhi hal-hal yang bisa merusak masa depan.</p>
+	</div>
+</div>
+</center>
+
+<center>
+<div id="psks" class="w3-container kota w3-card-4" style="display: none; background-image: url(psks4.jpg);">
+	<div class="w3-card w3-margin w3-left w3-white w3-animate-left" style="width: 50%;">
+		<h3><strong>Pendidik Sebaya dan Konselor Sebaya</strong></h3>
+		<hr>
+		<table>
+			<tr><td><img src="psks1.jpg" style="width: 100%;"><td><img src="psks2.jpg" style="width: 100%;"><td><img src="psks3.jpg" style="width: 100%;">
+			<tr><td><img src="psks4.jpg" style="width: 100%;"><td><img src="psks5.jpg" style="width: 100%;"><td><img src="psks6.jpg" style="width: 100%;">
+			<tr><td><img src="psks7.jpg" style="width: 100%;"><td><img src="psks8.jpg" style="width: 100%;"><td><img src="psks9.jpg" style="width: 100%;">
+			<tr><td><img src="psks10.jpg" style="width: 100%;"><td><img src="psks11.jpg" style="width: 100%;"><td><img src="psks12.jpg" style="width: 100%;">
+		</table>
+	</div>
+	<div class="w3-card w3-margin w3-right w3-white w3-animate-right" style="width: 43%;">
+		<h3><strong>Apa Itu PSKS?</strong></h3>
+		<hr>
+		<p style="width: 95%;">Peran Pendidik Sebaya dan Konselor Sebaya diantaranya adalah menyampaikan informasi substansi program KRR dengan cara sosialisasi, penyuluhan dan diskusi kelompok dengan tema KRR, melaksanakan advokasi dan KIE tentang program kepada khalayak umum dan penentu kebijakan pemerintah kota serta melakukan kegiatan menarik minat remaja untuk menggunakan PIK Remaja sebagai wadah khusus remaja. Kedua, strategi Pendidik Sebaya dan Konselor Sebaya menghadapi tantangan dan keterbatasan meliputi faktor internal yaitu membekali diri dengan pengetahuan yang memadai, managemen pengelolaan PIK-Remaja, memaksimalkan sarana dan prasaran yang dimiliki, dan faktor internal adalah menggugah partisipasi remaja baik sebagai relawan atau pengguna layanan PIK melalui kegiatan inovatif, serta kemitraan dengan organisasi lain. Kesimpulannya, langkah dan strategi yang dilakukan oleh Pendidik Sebaya dan Konselor Sebaya ditengah permasalahan yang ada mampu mencapai efektivitas sebagai penyedia informasi KRR bagi teman sebaya.</p>
+		<br>
+		<h5>Pendidik Sebaya (PS)</h5>
+		<p style="width: 95%;">Pendidik Sebaya (PS) adalah remaja/mahasiswa yang secara fungsional mempunyai komitmen dan motivasi yang tinggi, sebagai narasumber bagi kelompok remaja/mahasiswa lainnya, telah mengikuti pelatihan/orientasi Pendidik Sebaya atau yang belum dilatih dengan mempergunakan Paduan Kurikulum dan Modul Pelatihan yang telah disusun oleh BKKBN, serta bertanggungjawab kepada ketua PIK-R/M.</p>
+		<h5>Konselor Sebaya (KS)</h5>
+		<p style="width: 95%;">Konselor Sebaya (KS) adalah Pendidikan Sebaya yang secara fungsional mempunyai komitmen dan motivasi yang tinggi untuk memberikan konseling bagi kelompok remaja/mahasiswa sebayanya, telah mengikuti orientasi/pelatihan konseling atau yang belum dilatih dengan menggunakan Panduan kurikulum dan Modul Pelatihan yang telah disusun oleh BKKBN.</p>
+	</div>
+</center>
+</div>
+
+<center>
+<div id="action" class="w3-container kota w3-pale-green w3-card-4" style="display: none;">
+	<div class="w3-card w3-margin w3-green w3-animate-top" style="width: 43%;">
+		<br>
+		<h3><strong>GenRe! Action</strong></h3>
+		<h3><strong>On Recap</strong></h3>
+		<hr><br>
+		<tr><td><img src="action1.png" style="width: 90%;"><td><img src="action2.png" style="width: 90%;"><td><img src="action3.png" style="width: 90%;">
+		<tr><td><img src="action4.png" style="width: 90%;"><td><img src="action5.png" style="width: 90%;"><td><img src="action6.png" style="width: 90%;">
+		<tr><td><img src="action7.png" style="width: 90%;"><td><img src="action8.png" style="width: 90%;"><td><img src="action9.png" style="width: 90%;">
+		<br><br><br><br>
+	</div>
+</center>
+</div>
+
+<center>
+<div id="care" class="w3-container kota w3-teal w3-card-4" style="display: none;">
+	<div class="w3-card w3-margin w3-left w3-white w3-animate-left" style="width: 51%;">
+		<br>
+		<h2><strong>We Care We Share</strong></h2>
+		<hr>
+		<table>
+		<tr><td><img src="care1.jpg" style="width: 100%;"><td><img src="care2.jpg" style="width: 100%;"><td><img src="care3.jpg" style="width: 100%;">
+		<tr><td><img src="care4.jpg" style="width: 100%;"><td><img src="care5.jpg" style="width: 100%;"><td><img src="care6.jpg" style="width: 100%;">
+		<tr><td><img src="care7.jpg" style="width: 100%;"><td><img src="care8.jpg" style="width: 100%;"><td><img src="care9.jpg" style="width: 100%;">
+		<tr><td><img src="care10.jpg" style="width: 100%;"><td><img src="care11.jpg" style="width: 100%;"><td><img src="care12.jpg" style="width: 100%;">			
+		<tr><td><img src="care13.jpg" style="width: 100%;"><td><img src="care14.jpg" style="width: 100%;"><td><img src="care15.jpg" style="width: 100%;">			
+		</table>
+		<br><br><br>
+	</div>
+	<div class="w3-card w3-margin w3-right w3-white w3-animate-right" style="width: 43%;">
+		<br>
+		<h3><strong>Apa Itu We Care We Share?</strong></h3>
+		<hr>
+		<p style="width: 95%;">Tujuan dari rangkaian kegiatan yaitu dalam rangka aksi kepedulian terhadap anak-anak panti asuhan sekaligus edukasi yang berhubungan dengan program Genre. Sasaran kegiatan ini yaitu Panti Asuhan yang terdapat di Kota Bandung. Kegiatan ini dilakukan 6 bulan sekali setiap tahunnya.</p>
+		<br><br><br>
+	</div>
+</center>
+</div>
+	
+<center>
+<div id="youth" class="w3-container kota w3-white w3-card-4 w3-pale-yellow" style="display: none;">
+	<div class="w3-card w3-margin w3-white w3-animate-zoom" style="width: 60%;">
+		<br>
+		<h2><strong>International Youth Day</strong></h2>
+		<br>
+		<img src="iyd.jpg" style="width: 95%;">
+		<hr>
+		<p style="width: 95%;">Tepat 24 tahun lalu, Majelis Umum Perserikatan Bangsa-Bangsa mengesahkan tanggal 12 Agustus sebagai Hari Remaja Internasional atau ‘International Youth Day’. Meskipun tidak banyak yang tahu tentang hari istimewa ini, termasuk di kalangan remaja sendiri. Pengesahan tersebut menunjukkan pengakuan para pemimpin dunia atas keberadaan dan peran penting remaja, tidak sekadar dalam pembangunan, tetapi juga keberlanjutan generasi dan bumi yang kita tinggali.
+			Pertama, remaja merupakan calon penduduk usia produktif sehingga harus dipersiapkan menjadi sumber daya manusia yang berkualitas agar dapat berperan sebagai aktor/pelaku utama pembangunan. Ini berarti remaja harus sehat fisik dan mental, memiliki pengetahuan dan keterampilan sesuai dengan perkembangan ilmu pengetahuan dan teknologi, dan memiliki karakter berpondasikan agama dan budaya.
+			Kedua, remaja merupakan calon pasangan dan calon orang tua sehingga harus disiapkan agar dapat membangun keluarga yang berkualitas dan melahirkan generasi yang juga berkualitas.
+			Ketiga, remaja merupakan pewaris alam/lingkungan kepada anak-cucunya sehingga harus dapat menjamin keberlanjutan kehidupan generasi berikutnya, atau dengan kata lain harus dapat mewariskan alam/lingkungan yang masih layak untuk ditinggali oleh anak-cucunya.
+			Ini berarti remaja dituntut untuk memiliki green skills, yaitu pengetahuan, kemampuan, nilai, dan sikap yang diperlukan untuk hidup, berkembang, dan mendukung masyarakat yang berkelanjutan dan hemat sumber daya (PBB, 2023).
+		</p>
+		<br><br><br>
+	</div>
+</center>
+</div>
+
+<center>
+<div id="meet" class="w3-container kota w3-white w3-card-4" style="display: none; background-image: url(team.jpg);">
+	<div class="w3-card w3-margin w3-white w3-animate-bottom" style="width: 50%;">
+		<br>
+		<h2><strong>Meet The Team!</strong></h2>
+		<hr>
+		<img src="team.jpg" style="width: 95%;"><br><br>
+		<img src="team1.jpg" style="width: 95%;"><br><br>
+		<img src="team2.jpg" style="width: 95%;">
+		<br><br><br><br>
+	</div>
+</center>
+</div>
+
+<center>
+<div id="program" class="w3-container kota w3-brown w3-card-4" style="display: none;">
+	<div class="w3-card w3-margin w3-animate-top w3-white" style="width: 60%;">
+		<br>
+		<h2><strong>Our Programs</strong></h2>
+		<br>
+	</div>
+	<div class="w3-card w3-margin w3-left w3-animate-left w3-white" style="width: 50%;">
+		<br>
+		<h5><strong>Life Skill</strong></h5>
+		<hr>
+		<p style="width: 95%;">Life Skill (keterampilan hidup) adalah berbagai keterampilan atau kemampuan untuk dapat berperilaku positif dan beradaptasi dengan lingkungan memungkinkan seseorang mampu menghadapi berbagai tuntutan dan tantangan dalam hidupnya sehari hari secara efektif.</p>
+		<h6><strong>Soft Skill</strong></h6>
+		<p style="width: 95%;">Sebagai kemampuan kemampuan yang tidak dapat terlihat dan harus dimiliki atau diperlukan untuk mencapai kesuksesan. Contoh : kecerdasan emosi, komunikasi, kepemimpinan, berpikir kritis</p>
+		<br>
+		<h6><strong>Hard Skill</strong></h6>
+		<p style="width: 95%;">Merupakan kemampuan spesifik yang harus dimiliki untuk suatu pekerjaan tertentu. Contoh : design, teknologi computer, marketing</p>
+		<br><br><br>
+	</div>
+	<div class="w3-card w3-margin w3-right w3-animate-right w3-white" style="width: 40%;">
+		<br>
+		<h5><strong>Perilaku Beresiko & Tindakan Berbahaya</strong></h5>
+		<hr>
+		<p style="width: 95%;">Perilaku berisiko adalah bentuk perilaku yang dapat membahayakan kesehatan dan kesejahteraan dirinya sendiri maupun orang lain</p>
+		<p style="width: 95%;">Tindakan berbahaya merupaka suatu tindakan yang dilakukan seseorang sehingga dapat meningkatkan kemungkinan terjadinya suatu yang tidak di inginkan atau kecelakaan.</p>
+		<p style="width: 95%;">Perlakuan negatif pada remaja bermasalah dapat terjadi karena disebabkan pemahaman yang kurang tepat atau perilaku berisiko. Perilaku birisiko pada remaja yang disebabkan oleh gangguan penyesuaian diri muncul karena dipengaruhi oleh factor dari dalam diri (internal) maupun factor dari luar diri (eksternal).</p>
+		<br><br><br>
+	</div>
+		<div class="w3-card w3-margin w3-left w3-animate-left w3-white" style="width: 50%;">
+		<br>
+		<h5><strong>PKBR</strong></h5>
+		<hr>
+		<p style="width: 95%;">Program PKBR merupakan suatu program untuk memfasilitasi terwujudnya Generasi Berencana (GenRe) yaitu remaja yang berperilaku sehat, terhindar dari risiko Triad KRR (Pernikahan Usia Dini, Seks Bebas dan Napza), bercita-cita mewujudkan keluarga kecil bahagia sejahtera serta menjadi contoh, model, idola, dan sumber informasi bagi teman sebayanya.</p>
+		<br><br><br>
+	</div>
+	<div class="w3-card w3-margin w3-right w3-animate-right w3-white" style="width: 40%;">
+		<br>
+		<h5><strong>Gizi dan Stunting</strong></h5>
+		<hr>
+		<p style="width: 95%;">Stunting merupakan suatu keadaan kurang gizi (kurang nutrisi) dalam jangka waktu lama.
+			Faktor penyebab stunting dari kondisi kesehatan fisik dan psikis, status gizi,karakteristik rumah tangga dan finansialnya.
+			Faktor penting berasal dari Ibu nya itu sendiri, dilihat dari perilaku menjaga kesehatan dan gizi nya saat remaja.
+		</p>
+		<br><br><br>
+	</div>
+	
+</center>
+</div>
+
+<center>
+<div id="achievements" class="w3-container kota w3-card-4" style="display: none; background-image: url(genree.jpg);">
+	<div class="w3-card w3-margin w3-white w3-animate-opacity" style="width: 60%;">
+		<br>
+		<h2><strong>Our Achievements</strong></h2>
+		<hr>
+		<h5 style="width: 90%;"><strong>JUARA KATEGORI VIDEO EDUKASI TINGKAT PROVINSI JAWA BARAT 2022</strong></h5>
+		<h5 style="width: 90%;"><strong>JUARA 1 PIK REMAJA SEGMENTASI BERAKSI TINGKAT NASIONAL 2022 SMAN 25 BANDUNG</strong></h5>
+		<h5 style="width: 90%;"><strong>JUARA 1 PIK REMAJA SEGMENTASI BERKOLABORASI TINGKAT NASIONAL 2022 PIKMA UIN BANDUNG</strong></h5>
+		<h5 style="width: 90%;"><strong>JUARA 3 TPK BERAKSI “EDUKASI ELSIMIL” SEPEKAN AKSI TINGKAT NASIONAL 2022</strong></h5>
+		<h5 style="width: 90%;"><strong>JUARA 1 FORUM GENRE TERBAIK TINGKAT NASIONAL 2022 “PENGIMPLEMENTASIAN MODUL TENTANG KITA TERBANYAK TINGKAT PROVINSI JAWA BARAT”</strong></h5>
+		<h5 style="width: 90%;"><strong>JUARA 2 PIK REMAJA BERAKSI TINGKAT PROVINSI JAWA BARAT 2022 SMAN 22 BANDUNG</strong></h5>
+		<h5 style="width: 90%;"><strong>JUARA 3 DUTA GENRE PUTRA TINGKAT PROVINSI JAWA BARAT 2022 RIZKI RIFALDI SMAN 25 BANDUNG</strong></h5>
+		<h5 style="width: 90%;"><strong>JUARA 3 DUTA GENRE PUTRI TINGKAT PROVINSI JAWA BARAT 20222 ABIGAIL TABITHA KECAMATAN BABAKAN CIPARAY</strong></h5>
+		<h5 style="width: 90%;"><strong>FORUM GENRE TERBAIK TINGKAT PROVINSI JAWA BARAT 2022</strong></h5>
+		<h5 style="width: 90%;"><strong>Best Kostume Kategori 'AKU KAMU' BKKBN 2023</strong></h5>
+		<h5 style="width: 90%;"><strong>Capaian edukasi gizi dan anemia INI GENTING 12k Forum GenRe 2023</strong></h5>
+		<h5 style="width: 90%;"><strong>PIKR BERANI PERCONTOHAN JAWA BARAT JUARA 3 2023</strong></h5>
+		<h5 style="width: 90%;"><strong>PIKR BERAKSI PERCONTOHAN JAWA BARAT JUARA 3 2023</strong></h5>
+		<h5 style="width: 90%;"><strong>ADUJAK FORUM GENRE JAWA BARAT 2023 "KELOMPOK TERPINTAR"</strong></h5>
+		<h5 style="width: 90%;"><strong>TERBAIK 2 DUTA GENRE PUTRA JAWA BARAT 2023</strong></h5>
+		<h5 style="width: 90%;"><strong>HARAPAN 1 DUTA GENRE PUTRI JAWA BARAT 2023</strong></h5>
+		<br><br><br>
+	</div>
+</center>
+</div>
+	
+
+<br><br><br><br>
+<footer class="w3-dark-gray">
+	<center>
+	<br>
+	<table style="border-spacing: 20px;">
+		<tr><td colspan="4"><h4><strong>Follow Us</strong></h4><td><td><h4><strong>About Us</strong></h4>
+		<tr><td><a href="https://www.instagram.com/genrekotabandung?igsh=NDh6bnJsMHNhZTZr"><img src="instagram.png" style="width: 25px;"></a><td><a href="https://www.tiktok.com/@genrekotabandung?_t=8jPWTOQSCFm&_r=1"><img src="tiktok.png" style="width: 35px;"></a><td><a href="https://youtube.com/@genrekotabandung7266?si=gX_tmVedCrMPWk2L"><img src="youtube.png" style="width: 25px;"></a><td colspan="2"><td><button class="w3-button" onclick="openKota('genre')">What's GenRe?</button>
+		<tr><td><td><td><td><td><td><button class="w3-button" onclick="openKota('meet')">Meet The Team</button>
+	</table>
+	<br>
+	</center>
+</footer>
+
+
+<script>
+function openKota(namakota)
+{
+var i;
+var x = document.getElementsByClassName("kota");
+for (i = 0; i < x.length; i++)
+{
+	x[i].style.display = "none";
+} 
+document.getElementById(namakota).style.display = "block";
+}
+</script>
